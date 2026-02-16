@@ -499,7 +499,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <About />
       <MenuPreview />
       <Gallery />
       <Location />

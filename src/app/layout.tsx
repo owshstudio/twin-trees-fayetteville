@@ -138,7 +138,7 @@ function Navigation() {
               height={56}
               className="w-14 h-14 object-contain"
             />
-            <div className="hidden sm:block">
+            <div className="hidden sm:block whitespace-nowrap">
               <span className="text-xl font-bold text-cream tracking-wide font-[family-name:var(--font-heading)]">
                 Twin Trees
               </span>
@@ -148,13 +148,13 @@ function Navigation() {
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center gap-7 text-base">
-            <a
-              href="/#about"
+          <div className="hidden lg:flex items-center gap-7 text-base whitespace-nowrap">
+            <Link
+              href="/about"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               About
-            </a>
+            </Link>
             <Link
               href="/menu"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
@@ -196,7 +196,7 @@ function Navigation() {
             </a>
           </div>
 
-          <details className="md:hidden relative group">
+          <details className="lg:hidden relative group">
             <summary className="list-none cursor-pointer p-2 text-cream">
               <svg
                 className="w-6 h-6"
@@ -213,12 +213,12 @@ function Navigation() {
               </svg>
             </summary>
             <div className="absolute right-0 top-full mt-2 bg-charcoal-light border border-gold/10 rounded-lg shadow-xl py-2 w-56 z-50">
-              <a
-                href="/#about"
+              <Link
+                href="/about"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
               >
                 About
-              </a>
+              </Link>
               <Link
                 href="/menu"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
@@ -299,12 +299,12 @@ function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a
-                  href="/#about"
+                <Link
+                  href="/about"
                   className="text-cream/60 hover:text-gold transition-colors"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
