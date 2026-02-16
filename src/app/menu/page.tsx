@@ -5,6 +5,29 @@ export const metadata: Metadata = {
   title: "Menu | Twin Trees Fayetteville - Original Syracuse Style Pizza",
   description:
     "Full menu for Twin Trees Fayetteville. Pizza, burgers, subs, salads, appetizers & more. View all items with prices. Order online or call 315-632-4777.",
+  alternates: { canonical: "/menu" },
+  openGraph: {
+    title: "Menu | Twin Trees Fayetteville",
+    description:
+      "Full menu with prices. Pizza, burgers, subs, salads, appetizers & more. Order online or call 315-632-4777.",
+    url: "/menu",
+    type: "website",
+    images: [
+      {
+        url: "/images/pizza-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Twin Trees Fayetteville pizza menu",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Menu | Twin Trees Fayetteville",
+    description:
+      "Full menu with prices. Pizza, burgers, subs, salads, appetizers & more.",
+    images: ["/images/pizza-bg.jpg"],
+  },
 };
 
 type MenuItem = {
@@ -258,9 +281,9 @@ function MenuItemRow({ item }: { item: MenuItem }) {
   return (
     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start py-3.5 border-b border-gold/5 last:border-0 gap-1">
       <div className="flex-1">
-        <h4 className="text-cream font-medium">{item.name}</h4>
+        <h3 className="text-cream font-medium">{item.name}</h3>
         {item.description && (
-          <p className="text-cream/45 text-sm mt-0.5">{item.description}</p>
+          <p className="text-cream/60 text-sm mt-0.5">{item.description}</p>
         )}
       </div>
       <span className="text-gold font-medium text-sm sm:text-base whitespace-nowrap sm:ml-6">
@@ -273,11 +296,11 @@ function MenuItemRow({ item }: { item: MenuItem }) {
 function MenuSection({ category }: { category: MenuCategory }) {
   return (
     <div className="bg-charcoal-light rounded-lg p-6 sm:p-8 border border-gold/10">
-      <h3 className="text-2xl font-bold text-gold mb-1 font-[family-name:var(--font-heading)]">
+      <h2 className="text-2xl font-bold text-gold mb-1 font-[family-name:var(--font-heading)]">
         {category.title}
-      </h3>
+      </h2>
       {category.subtitle && (
-        <p className="text-cream/45 text-sm mb-5">{category.subtitle}</p>
+        <p className="text-cream/60 text-sm mb-5">{category.subtitle}</p>
       )}
       {!category.subtitle && <div className="mb-5" />}
       <div>
@@ -286,7 +309,7 @@ function MenuSection({ category }: { category: MenuCategory }) {
         ))}
       </div>
       {category.note && (
-        <p className="text-cream/45 text-sm mt-4 italic">{category.note}</p>
+        <p className="text-cream/60 text-sm mt-4 italic">{category.note}</p>
       )}
     </div>
   );
@@ -295,10 +318,10 @@ function MenuSection({ category }: { category: MenuCategory }) {
 function PizzaSection() {
   return (
     <div className="bg-charcoal-light rounded-lg p-6 sm:p-8 border border-gold/10">
-      <h3 className="text-2xl font-bold text-gold mb-8 font-[family-name:var(--font-heading)]">Pizza</h3>
+      <h2 className="text-2xl font-bold text-gold mb-8 font-[family-name:var(--font-heading)]">Pizza</h2>
 
       <div className="mb-10">
-        <h4 className="text-lg font-semibold text-cream mb-4 font-[family-name:var(--font-heading)]">Build Your Own</h4>
+        <h3 className="text-lg font-semibold text-cream mb-4 font-[family-name:var(--font-heading)]">Build Your Own</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {[
             { size: '8" Mini', price: "$9.59" },
@@ -319,9 +342,9 @@ function PizzaSection() {
       </div>
 
       <div className="mb-8">
-        <h4 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
+        <h3 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
           Regular Toppings
-        </h4>
+        </h3>
         <div className="bg-charcoal rounded p-4 border border-gold/5 mb-3">
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gold font-medium mb-3">
             <span>Mini $1.59</span>
@@ -330,7 +353,7 @@ function PizzaSection() {
             <span>State Fair $4.29</span>
             <span>GF $1.99</span>
           </div>
-          <p className="text-cream/50 text-sm leading-relaxed">
+          <p className="text-cream/60 text-sm leading-relaxed">
             Pepperoni, Cup n Char Pepperoni, Sausage, Meatballs, Ham, Bacon,
             Ricotta, Onions, Olives, Green & Red Peppers, Banana Peppers,
             Cherry Peppers, Roasted Peppers, Mushrooms, Broccoli, Fresh
@@ -341,9 +364,9 @@ function PizzaSection() {
       </div>
 
       <div className="mb-8">
-        <h4 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
+        <h3 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
           Premium Toppings
-        </h4>
+        </h3>
         <div className="bg-charcoal rounded p-4 border border-gold/5 mb-3">
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gold font-medium mb-3">
             <span>Mini $1.99</span>
@@ -352,14 +375,14 @@ function PizzaSection() {
             <span>State Fair $4.79</span>
             <span>GF $2.59</span>
           </div>
-          <p className="text-cream/50 text-sm leading-relaxed">
+          <p className="text-cream/60 text-sm leading-relaxed">
             Steak, Chicken, Eggplant, Fresh Mozzarella, Extra Cheese
           </p>
         </div>
       </div>
 
       <div className="mb-10">
-        <h4 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">Extras</h4>
+        <h3 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">Extras</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {[
             { name: "Tomato & Garlic Sauce Mix", price: "$1.29" },
@@ -384,9 +407,9 @@ function PizzaSection() {
       </div>
 
       <div>
-        <h4 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
+        <h3 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
           Specialty Pizzas
-        </h4>
+        </h3>
         <div className="bg-charcoal rounded p-4 border border-gold/5 mb-5">
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gold font-medium">
             <span>12&quot; Small $20.59</span>
@@ -425,8 +448,8 @@ function PizzaSection() {
               key={sp.name}
               className="flex flex-col py-3.5 border-b border-gold/5 last:border-0"
             >
-              <h5 className="text-cream font-medium">{sp.name}</h5>
-              <p className="text-cream/45 text-sm">{sp.description}</p>
+              <h4 className="text-cream font-medium">{sp.name}</h4>
+              <p className="text-cream/60 text-sm">{sp.description}</p>
             </div>
           ))}
         </div>
@@ -438,9 +461,9 @@ function PizzaSection() {
 function SidesSection() {
   return (
     <div className="bg-charcoal-light rounded-lg p-6 sm:p-8 border border-gold/10">
-      <h3 className="text-2xl font-bold text-gold mb-6 font-[family-name:var(--font-heading)]">
+      <h2 className="text-2xl font-bold text-gold mb-6 font-[family-name:var(--font-heading)]">
         Sides & Add-Ons
-      </h3>
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {[
           { name: "Side of Fries", price: "$2.09" },
@@ -472,8 +495,9 @@ export default function MenuPage() {
       <section className="relative py-20 sm:py-24 overflow-hidden">
         <Image
           src="/images/pizza-bg.jpg"
-          alt="Pizza background"
+          alt="Twin Trees Fayetteville menu - Syracuse style pizza"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />
@@ -552,7 +576,7 @@ export default function MenuPage() {
             >
               Order Online Now
             </a>
-            <p className="text-cream/40 text-sm mt-4">
+            <p className="text-cream/60 text-sm mt-4">
               Or call us at{" "}
               <a
                 href="tel:315-632-4777"
@@ -561,7 +585,7 @@ export default function MenuPage() {
                 315-632-4777
               </a>
             </p>
-            <p className="text-cream/30 text-xs mt-2">
+            <p className="text-cream/60 text-xs mt-2">
               Delivery ~45 min | Pickup ~25-30 min | Curbside available
             </p>
           </div>

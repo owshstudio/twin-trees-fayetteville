@@ -3,19 +3,40 @@ import Link from "next/link";
 import Image from "next/image";
 import "./globals.css";
 
+const siteUrl = "https://twin-trees-fayetteville.vercel.app";
+
 export const metadata: Metadata = {
   title: "Twin Trees Fayetteville | Original Syracuse Style Pizza Since 1957",
   description:
     "Twin Trees Fayetteville - Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more. Order online or visit us at 104 Highbridge St, Fayetteville, NY 13066.",
   keywords:
-    "Twin Trees, Fayetteville, pizza, Syracuse style pizza, restaurant, Fayetteville NY, pizza delivery",
+    "Twin Trees, Fayetteville, pizza, Syracuse style pizza, restaurant, Fayetteville NY, pizza delivery, CNY pizza",
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Twin Trees Fayetteville | Original Syracuse Style Pizza Since 1957",
     description:
       "Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more. 104 Highbridge St, Fayetteville, NY 13066.",
+    url: siteUrl,
     type: "website",
     locale: "en_US",
     siteName: "Twin Trees Fayetteville",
+    images: [
+      {
+        url: "/images/storefront.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Twin Trees Fayetteville restaurant storefront",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Twin Trees Fayetteville | Original Syracuse Style Pizza Since 1957",
+    description:
+      "Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more.",
+    images: ["/images/storefront.jpg"],
   },
 };
 
@@ -25,6 +46,7 @@ const jsonLd = {
   name: "Twin Trees Fayetteville",
   description:
     "Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more.",
+  image: `${siteUrl}/images/storefront.jpg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "104 Highbridge St",
@@ -33,10 +55,19 @@ const jsonLd = {
     postalCode: "13066",
     addressCountry: "US",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 43.0297,
+    longitude: -76.0045,
+  },
   telephone: "+1-315-632-4777",
   url: "https://www.twintreesfayetteville.com",
   servesCuisine: ["Pizza", "Italian", "American"],
   priceRange: "$$",
+  hasMenu: {
+    "@type": "Menu",
+    url: `${siteUrl}/menu`,
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -62,6 +93,13 @@ const jsonLd = {
     "@type": "Person",
     name: "Ross Family",
   },
+  sameAs: [
+    "https://www.facebook.com/TwinTreesFayetteville",
+    "https://www.instagram.com/twintreesfayetteville",
+  ],
+  acceptsReservations: false,
+  paymentAccepted: "Cash, Credit Card",
+  currenciesAccepted: "USD",
 };
 
 function CamillusBanner() {
@@ -201,7 +239,7 @@ function Navigation() {
               <div className="border-t border-gold/10 mt-2 pt-2 px-4">
                 <a
                   href="tel:315-632-4777"
-                  className="block py-2.5 text-gold font-semibold"
+                  className="block py-2.5 text-gold font-semibold hover:text-gold-light transition-colors"
                 >
                   315-632-4777
                 </a>
@@ -242,7 +280,7 @@ function Footer() {
                 Twin Trees
               </span>
             </div>
-            <p className="text-cream/50 text-sm leading-relaxed">
+            <p className="text-cream/60 text-sm leading-relaxed">
               Ross family owned since 1957. Three generations of Original
               Syracuse Style pizza.
             </p>
@@ -256,7 +294,7 @@ function Footer() {
               <li>
                 <a
                   href="/#about"
-                  className="text-cream/50 hover:text-gold transition-colors"
+                  className="text-cream/60 hover:text-gold transition-colors"
                 >
                   About Us
                 </a>
@@ -264,7 +302,7 @@ function Footer() {
               <li>
                 <Link
                   href="/menu"
-                  className="text-cream/50 hover:text-gold transition-colors"
+                  className="text-cream/60 hover:text-gold transition-colors"
                 >
                   Full Menu
                 </Link>
@@ -272,7 +310,7 @@ function Footer() {
               <li>
                 <a
                   href="/#location"
-                  className="text-cream/50 hover:text-gold transition-colors"
+                  className="text-cream/60 hover:text-gold transition-colors"
                 >
                   Location &amp; Hours
                 </a>
@@ -282,7 +320,7 @@ function Footer() {
                   href="https://www.twintreesfayetteville.com/services-2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cream/50 hover:text-gold transition-colors"
+                  className="text-cream/60 hover:text-gold transition-colors"
                 >
                   Order Online
                 </a>
@@ -299,7 +337,7 @@ function Footer() {
                 href="https://www.facebook.com/TwinTreesFayetteville"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream/50 hover:text-gold transition-colors"
+                className="text-cream/60 hover:text-gold transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -310,7 +348,7 @@ function Footer() {
                 href="https://www.instagram.com/twintreesfayetteville"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream/50 hover:text-gold transition-colors"
+                className="text-cream/60 hover:text-gold transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -318,7 +356,7 @@ function Footer() {
                 </svg>
               </a>
             </div>
-            <p className="text-cream/40 text-sm">
+            <p className="text-cream/50 text-sm">
               104 Highbridge St<br />
               Fayetteville, NY 13066
             </p>
@@ -343,15 +381,15 @@ function Footer() {
               <p className="text-cream font-semibold group-hover:text-gold transition-colors text-sm">
                 Twin Trees Camillus
               </p>
-              <p className="text-cream/40 text-xs mt-1">
+              <p className="text-cream/50 text-xs mt-1">
                 5401 W Genesee St, Camillus, NY
               </p>
-              <p className="text-cream/40 text-xs">315-530-1947</p>
+              <p className="text-cream/50 text-xs">315-530-1947</p>
             </a>
           </div>
         </div>
 
-        <div className="border-t border-gold/10 mt-12 pt-8 text-center text-cream/30 text-xs">
+        <div className="border-t border-gold/10 mt-12 pt-8 text-center text-cream/50 text-xs">
           <p>&copy; 2026 Twin Trees Fayetteville. All rights reserved.</p>
         </div>
       </div>

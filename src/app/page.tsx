@@ -8,6 +8,7 @@ function Hero() {
         src="/images/storefront.jpg"
         alt="Twin Trees Fayetteville storefront"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />
@@ -30,7 +31,7 @@ function Hero() {
         <p className="text-lg sm:text-xl text-cream/80 mb-6 max-w-xl mx-auto tracking-wide">
           Passion for Pizza &nbsp;|&nbsp; Original Syracuse Style
         </p>
-        <p className="text-cream/50 text-sm mb-10 tracking-widest uppercase">
+        <p className="text-cream/60 text-sm mb-10 tracking-widest uppercase">
           Ross Family Owned &bull; Established 1957 &bull; 3rd Generation
         </p>
 
@@ -53,7 +54,7 @@ function Hero() {
 
         <a
           href="tel:315-632-4777"
-          className="inline-block mt-8 text-cream/60 hover:text-gold transition-colors text-lg tracking-wide"
+          className="inline-block mt-8 text-cream/70 hover:text-gold transition-colors text-lg tracking-wide"
         >
           315-632-4777
         </a>
@@ -61,7 +62,7 @@ function Hero() {
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <svg
-          className="w-6 h-6 text-cream/30"
+          className="w-6 h-6 text-cream/50"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -80,7 +81,7 @@ function Hero() {
 
 function About() {
   return (
-    <section id="about" className="py-24 bg-charcoal">
+    <section id="about" className="py-24 bg-charcoal scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-cream mb-4 font-[family-name:var(--font-heading)]">
@@ -95,6 +96,7 @@ function About() {
               src="/images/owners.jpg"
               alt="The Ross family - owners of Twin Trees"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -123,15 +125,15 @@ function About() {
             <div className="flex items-center gap-8 pt-6 border-t border-gold/10">
               <div className="text-center">
                 <p className="text-3xl font-bold text-gold font-[family-name:var(--font-heading)]">1957</p>
-                <p className="text-cream/40 text-xs uppercase tracking-wider mt-1">Established</p>
+                <p className="text-cream/50 text-xs uppercase tracking-wider mt-1">Established</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-gold font-[family-name:var(--font-heading)]">3rd</p>
-                <p className="text-cream/40 text-xs uppercase tracking-wider mt-1">Generation</p>
+                <p className="text-cream/50 text-xs uppercase tracking-wider mt-1">Generation</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-gold font-[family-name:var(--font-heading)]">9</p>
-                <p className="text-cream/40 text-xs uppercase tracking-wider mt-1">Locations</p>
+                <p className="text-cream/50 text-xs uppercase tracking-wider mt-1">Locations</p>
               </div>
             </div>
           </div>
@@ -157,6 +159,7 @@ function MenuPreview() {
         src="/images/pizza-bg.jpg"
         alt="Pizza close-up background"
         fill
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-black/80" />
@@ -183,7 +186,7 @@ function MenuPreview() {
               <h3 className="text-xl font-bold text-cream group-hover:text-gold transition-colors mb-2 font-[family-name:var(--font-heading)]">
                 {cat.name}
               </h3>
-              <p className="text-cream/50 text-sm">{cat.desc}</p>
+              <p className="text-cream/60 text-sm">{cat.desc}</p>
             </Link>
           ))}
         </div>
@@ -203,25 +206,25 @@ function MenuPreview() {
 
 function Gallery() {
   const photos = [
-    { src: "/images/gallery/photo-1.jpg", alt: "Twin Trees food and atmosphere" },
-    { src: "/images/gallery/photo-2.jpg", alt: "Twin Trees food and atmosphere" },
-    { src: "/images/gallery/photo-3.jpg", alt: "Twin Trees food and atmosphere" },
-    { src: "/images/gallery/photo-4.jpg", alt: "Twin Trees food and atmosphere" },
-    { src: "/images/gallery/photo-5.jpg", alt: "Twin Trees food and atmosphere" },
-    { src: "/images/gallery/photo-6.jpg", alt: "Twin Trees food and atmosphere" },
-    { src: "/images/gallery/photo-7.jpg", alt: "Twin Trees food and atmosphere" },
-    { src: "/images/gallery/photo-8.jpg", alt: "Twin Trees food and atmosphere" },
+    { src: "/images/gallery/photo-1.jpg", alt: "Fresh pizza from Twin Trees Fayetteville" },
+    { src: "/images/gallery/photo-2.jpg", alt: "Twin Trees restaurant dining area" },
+    { src: "/images/gallery/photo-3.jpg", alt: "Signature Syracuse style pizza slice" },
+    { src: "/images/gallery/photo-4.jpg", alt: "Appetizers and sides at Twin Trees" },
+    { src: "/images/gallery/photo-5.jpg", alt: "Twin Trees Fayetteville bar area" },
+    { src: "/images/gallery/photo-6.jpg", alt: "Burgers and sandwiches at Twin Trees" },
+    { src: "/images/gallery/photo-7.jpg", alt: "Twin Trees kitchen preparing orders" },
+    { src: "/images/gallery/photo-8.jpg", alt: "Customer favorites at Twin Trees Fayetteville" },
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-charcoal-light">
+    <section id="gallery" className="py-24 bg-charcoal-light scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-cream mb-4 font-[family-name:var(--font-heading)]">
             Gallery
           </h2>
           <div className="w-20 h-0.5 bg-gold mx-auto mb-4" />
-          <p className="text-cream/50">
+          <p className="text-cream/60">
             A taste of what&apos;s waiting for you
           </p>
         </div>
@@ -236,6 +239,7 @@ function Gallery() {
                 src={photo.src}
                 alt={photo.alt}
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
@@ -249,7 +253,7 @@ function Gallery() {
 
 function Location() {
   return (
-    <section id="location" className="py-24 bg-charcoal">
+    <section id="location" className="py-24 bg-charcoal scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-cream mb-4 font-[family-name:var(--font-heading)]">
@@ -370,12 +374,12 @@ function Location() {
                   <p className="text-gold font-bold group-hover:text-gold-light transition-colors font-[family-name:var(--font-heading)]">
                     Visit Our Camillus Location
                   </p>
-                  <p className="text-cream/50 text-sm">
+                  <p className="text-cream/60 text-sm">
                     5401 W Genesee St, Camillus, NY 13031
                   </p>
-                  <p className="text-cream/40 text-sm">315-530-1947</p>
+                  <p className="text-cream/50 text-sm">315-530-1947</p>
                 </div>
-                <span className="text-cream/20 group-hover:text-gold transition-colors text-2xl">
+                <span className="text-cream/50 group-hover:text-gold transition-colors text-2xl">
                   &rarr;
                 </span>
               </div>
@@ -389,14 +393,14 @@ function Location() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-24 bg-charcoal-light">
+    <section id="contact" className="py-24 bg-charcoal-light scroll-mt-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-cream mb-4 font-[family-name:var(--font-heading)]">
             Contact Us
           </h2>
           <div className="w-20 h-0.5 bg-gold mx-auto mb-4" />
-          <p className="text-cream/50">
+          <p className="text-cream/60">
             Have a question? Want to book a large order? Drop us a line.
           </p>
         </div>
@@ -414,7 +418,7 @@ function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full bg-charcoal-light border border-gold/10 rounded px-4 py-3 text-cream placeholder-cream/30 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors"
+                className="w-full bg-charcoal-light border border-gold/10 rounded px-4 py-3 text-cream placeholder-cream/40 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors"
                 placeholder="Your name"
               />
             </div>
@@ -429,7 +433,7 @@ function Contact() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full bg-charcoal-light border border-gold/10 rounded px-4 py-3 text-cream placeholder-cream/30 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors"
+                className="w-full bg-charcoal-light border border-gold/10 rounded px-4 py-3 text-cream placeholder-cream/40 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors"
                 placeholder="your@email.com"
               />
             </div>
@@ -444,7 +448,7 @@ function Contact() {
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full bg-charcoal-light border border-gold/10 rounded px-4 py-3 text-cream placeholder-cream/30 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors resize-none"
+                className="w-full bg-charcoal-light border border-gold/10 rounded px-4 py-3 text-cream placeholder-cream/40 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/50 transition-colors resize-none"
                 placeholder="Your message..."
               />
             </div>
@@ -459,7 +463,7 @@ function Contact() {
           <div className="mt-8 pt-6 border-t border-gold/10 flex flex-wrap items-center justify-center gap-6 text-sm">
             <a
               href="tel:315-632-4777"
-              className="text-cream/50 hover:text-gold transition-colors"
+              className="text-cream/60 hover:text-gold transition-colors"
             >
               315-632-4777
             </a>
@@ -467,7 +471,7 @@ function Contact() {
               href="https://www.facebook.com/TwinTreesFayetteville"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cream/50 hover:text-gold transition-colors"
+              className="text-cream/60 hover:text-gold transition-colors"
             >
               Facebook
             </a>
@@ -475,7 +479,7 @@ function Contact() {
               href="https://www.instagram.com/twintreesfayetteville"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cream/50 hover:text-gold transition-colors"
+              className="text-cream/60 hover:text-gold transition-colors"
             >
               @twintreesfayetteville
             </a>
