@@ -17,17 +17,13 @@ function Hero() {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <Image
           src="/images/logo.png"
-          alt="Twin Trees Logo"
-          width={120}
-          height={120}
-          className="mx-auto mb-8 w-24 h-24 sm:w-30 sm:h-30 object-contain drop-shadow-2xl"
+          alt="Twin Trees Fayetteville"
+          width={400}
+          height={138}
+          className="mx-auto mb-8 w-72 sm:w-80 md:w-96 h-auto object-contain drop-shadow-2xl"
+          priority
         />
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-cream mb-3 tracking-tight font-[family-name:var(--font-heading)]">
-          Twin Trees
-        </h1>
-        <p className="text-2xl sm:text-3xl text-gold font-medium mb-2 font-[family-name:var(--font-heading)]">
-          Fayetteville
-        </p>
+        <h1 className="sr-only">Twin Trees Fayetteville</h1>
         <p className="text-lg sm:text-xl text-cream/80 mb-6 max-w-xl mx-auto tracking-wide">
           Passion for Pizza &nbsp;|&nbsp; Original Syracuse Style
         </p>
@@ -214,6 +210,10 @@ function Gallery() {
     { src: "/images/gallery/photo-6.jpg", alt: "Burgers and sandwiches at Twin Trees" },
     { src: "/images/gallery/photo-7.jpg", alt: "Twin Trees kitchen preparing orders" },
     { src: "/images/gallery/photo-8.jpg", alt: "Customer favorites at Twin Trees Fayetteville" },
+    { src: "/images/gallery/photo-9.jpg", alt: "Twin Trees pizza fresh out of the oven" },
+    { src: "/images/gallery/photo-10.jpg", alt: "Twin Trees Fayetteville interior" },
+    { src: "/images/gallery/photo-11.jpg", alt: "Specialty pizza at Twin Trees" },
+    { src: "/images/gallery/photo-12.jpg", alt: "Twin Trees menu favorites" },
   ];
 
   return (
