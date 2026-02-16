@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-cream: #FFF8F0;
+  --color-cream: #FFF8E7;
   --color-cream-dark: #F5E6D3;
+  --color-gold: #C5953A;
+  --color-gold-light: #D4A94E;
+  --color-gold-dark: #A67B2E;
+  --color-deep-red: #8B0000;
+  --color-deep-red-light: #A52A2A;
   --color-red-900: #5C1010;
   --color-red-800: #7B1818;
   --color-red-700: #9B2222;
   --color-red-600: #B91C1C;
-  --color-red-500: #DC2626;
-  --color-red-400: #F87171;
-  --color-amber-900: #78350F;
-  --color-amber-800: #92400E;
-  --color-amber-700: #B45309;
-  --color-amber-500: #F59E0B;
-  --color-amber-400: #FBBF24;
-  --color-amber-300: #FCD34D;
-  --color-wood: #3E2723;
-  --color-wood-light: #5D4037;
-  --color-wood-dark: #1B0F0A;
-  --color-charcoal: #1A1110;
-  --color-charcoal-light: #2D2222;
-  --font-sans: var(--font-geist-sans);
+  --color-charcoal: #1a1a1a;
+  --color-charcoal-light: #2a2a2a;
+  --color-charcoal-mid: #222222;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', 'Open Sans', Arial, sans-serif;
 }
 
 html {
@@ -30,10 +26,13 @@ html {
 body {
   background: var(--color-charcoal);
   color: var(--color-cream);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
 }
 
-/* Scrollbar styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -43,6 +42,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-red-800);
+  background: var(--color-deep-red);
   border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-deep-red-light);
 }

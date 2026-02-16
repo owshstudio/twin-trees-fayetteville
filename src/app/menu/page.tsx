@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Menu | Twin Trees Fayetteville - Original Syracuse Style Pizza",
@@ -13,6 +14,7 @@ type MenuItem = {
 };
 
 type MenuCategory = {
+  id: string;
   title: string;
   subtitle?: string;
   items: MenuItem[];
@@ -21,6 +23,7 @@ type MenuCategory = {
 
 const menuData: MenuCategory[] = [
   {
+    id: "appetizers",
     title: "Appetizers",
     items: [
       {
@@ -81,6 +84,7 @@ const menuData: MenuCategory[] = [
     ],
   },
   {
+    id: "salads",
     title: "Salads",
     items: [
       { name: "Antipasto", prices: "Small $7.59 / Large $13.99" },
@@ -98,6 +102,7 @@ const menuData: MenuCategory[] = [
     ],
   },
   {
+    id: "burgers",
     title: "Burgers",
     subtitle: "1/2 Lb USDA Prime Black Angus, served with fries",
     items: [
@@ -114,19 +119,20 @@ const menuData: MenuCategory[] = [
         description: "Pickles & crispy fries smothered in cheese wiz",
       },
       {
-        name: "Jalapeño Cheddar Burger",
+        name: "Jalapeno Cheddar Burger",
         prices: "$14.99",
         description: "Topped with chipotle mayo",
       },
     ],
   },
   {
+    id: "sandwiches",
     title: "Sandwiches",
     items: [
       {
         name: "The Syracuse",
         prices: "$10.99",
-        description: "Gianelli sausage with sautéed peppers and onions",
+        description: "Gianelli sausage with sauteed peppers and onions",
       },
       {
         name: "The Utica",
@@ -179,6 +185,7 @@ const menuData: MenuCategory[] = [
     note: "Add cheese to any sandwich $1.29",
   },
   {
+    id: "chicken-sandwiches",
     title: "Chicken Sandwiches",
     subtitle: "Served on brioche or everything roll with fries",
     items: [
@@ -202,6 +209,7 @@ const menuData: MenuCategory[] = [
     ],
   },
   {
+    id: "philly-subs",
     title: "Philly Subs",
     items: [
       {
@@ -235,16 +243,27 @@ const menuData: MenuCategory[] = [
   },
 ];
 
+const categoryNav = [
+  { id: "appetizers", label: "Appetizers" },
+  { id: "salads", label: "Salads" },
+  { id: "burgers", label: "Burgers" },
+  { id: "sandwiches", label: "Sandwiches" },
+  { id: "chicken-sandwiches", label: "Chicken Sandwiches" },
+  { id: "philly-subs", label: "Philly Subs" },
+  { id: "pizza", label: "Pizza" },
+  { id: "sides", label: "Sides" },
+];
+
 function MenuItemRow({ item }: { item: MenuItem }) {
   return (
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start py-3 border-b border-red-900/10 last:border-0 gap-1">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start py-3.5 border-b border-gold/5 last:border-0 gap-1">
       <div className="flex-1">
         <h4 className="text-cream font-medium">{item.name}</h4>
         {item.description && (
-          <p className="text-cream/50 text-sm mt-0.5">{item.description}</p>
+          <p className="text-cream/45 text-sm mt-0.5">{item.description}</p>
         )}
       </div>
-      <span className="text-amber-400 font-medium text-sm sm:text-base whitespace-nowrap sm:ml-4">
+      <span className="text-gold font-medium text-sm sm:text-base whitespace-nowrap sm:ml-6">
         {item.prices}
       </span>
     </div>
@@ -253,21 +272,21 @@ function MenuItemRow({ item }: { item: MenuItem }) {
 
 function MenuSection({ category }: { category: MenuCategory }) {
   return (
-    <div className="bg-charcoal-light rounded-2xl p-6 sm:p-8 border border-red-900/20">
-      <h3 className="text-2xl font-bold text-amber-400 mb-1">
+    <div className="bg-charcoal-light rounded-lg p-6 sm:p-8 border border-gold/10">
+      <h3 className="text-2xl font-bold text-gold mb-1 font-[family-name:var(--font-heading)]">
         {category.title}
       </h3>
       {category.subtitle && (
-        <p className="text-cream/50 text-sm mb-4">{category.subtitle}</p>
+        <p className="text-cream/45 text-sm mb-5">{category.subtitle}</p>
       )}
-      {!category.subtitle && <div className="mb-4" />}
+      {!category.subtitle && <div className="mb-5" />}
       <div>
         {category.items.map((item, i) => (
           <MenuItemRow key={i} item={item} />
         ))}
       </div>
       {category.note && (
-        <p className="text-cream/50 text-sm mt-4 italic">{category.note}</p>
+        <p className="text-cream/45 text-sm mt-4 italic">{category.note}</p>
       )}
     </div>
   );
@@ -275,12 +294,11 @@ function MenuSection({ category }: { category: MenuCategory }) {
 
 function PizzaSection() {
   return (
-    <div className="bg-charcoal-light rounded-2xl p-6 sm:p-8 border border-red-900/20">
-      <h3 className="text-2xl font-bold text-amber-400 mb-6">Pizza</h3>
+    <div className="bg-charcoal-light rounded-lg p-6 sm:p-8 border border-gold/10">
+      <h3 className="text-2xl font-bold text-gold mb-8 font-[family-name:var(--font-heading)]">Pizza</h3>
 
-      {/* Base pizza sizes */}
-      <div className="mb-8">
-        <h4 className="text-lg font-semibold text-cream mb-4">Build Your Own</h4>
+      <div className="mb-10">
+        <h4 className="text-lg font-semibold text-cream mb-4 font-[family-name:var(--font-heading)]">Build Your Own</h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {[
             { size: '8" Mini', price: "$9.59" },
@@ -291,60 +309,57 @@ function PizzaSection() {
           ].map((p) => (
             <div
               key={p.size}
-              className="flex justify-between items-center bg-charcoal rounded-lg px-4 py-3 border border-red-900/10"
+              className="flex justify-between items-center bg-charcoal rounded px-4 py-3 border border-gold/5"
             >
               <span className="text-cream">{p.size}</span>
-              <span className="text-amber-400 font-semibold">{p.price}</span>
+              <span className="text-gold font-semibold">{p.price}</span>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Regular toppings */}
-      <div className="mb-6">
-        <h4 className="text-lg font-semibold text-cream mb-3">
+      <div className="mb-8">
+        <h4 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
           Regular Toppings
         </h4>
-        <div className="bg-charcoal rounded-lg p-4 border border-red-900/10 mb-3">
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-amber-400 font-medium mb-3">
+        <div className="bg-charcoal rounded p-4 border border-gold/5 mb-3">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gold font-medium mb-3">
             <span>Mini $1.59</span>
             <span>Small $2.29</span>
             <span>Large $3.09</span>
             <span>State Fair $4.29</span>
             <span>GF $1.99</span>
           </div>
-          <p className="text-cream/60 text-sm leading-relaxed">
+          <p className="text-cream/50 text-sm leading-relaxed">
             Pepperoni, Cup n Char Pepperoni, Sausage, Meatballs, Ham, Bacon,
             Ricotta, Onions, Olives, Green & Red Peppers, Banana Peppers,
             Cherry Peppers, Roasted Peppers, Mushrooms, Broccoli, Fresh
-            Tomatoes, Spinach, Pineapple, Anchovies, Jalapeño, Fresh Basil,
+            Tomatoes, Spinach, Pineapple, Anchovies, Jalapeno, Fresh Basil,
             Fresh Garlic
           </p>
         </div>
       </div>
 
-      {/* Premium toppings */}
-      <div className="mb-6">
-        <h4 className="text-lg font-semibold text-cream mb-3">
+      <div className="mb-8">
+        <h4 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
           Premium Toppings
         </h4>
-        <div className="bg-charcoal rounded-lg p-4 border border-red-900/10 mb-3">
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-amber-400 font-medium mb-3">
+        <div className="bg-charcoal rounded p-4 border border-gold/5 mb-3">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gold font-medium mb-3">
             <span>Mini $1.99</span>
             <span>Small $2.99</span>
             <span>Large $3.79</span>
             <span>State Fair $4.79</span>
             <span>GF $2.59</span>
           </div>
-          <p className="text-cream/60 text-sm leading-relaxed">
+          <p className="text-cream/50 text-sm leading-relaxed">
             Steak, Chicken, Eggplant, Fresh Mozzarella, Extra Cheese
           </p>
         </div>
       </div>
 
-      {/* Extras */}
-      <div className="mb-8">
-        <h4 className="text-lg font-semibold text-cream mb-3">Extras</h4>
+      <div className="mb-10">
+        <h4 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">Extras</h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {[
             { name: "Tomato & Garlic Sauce Mix", price: "$1.29" },
@@ -357,10 +372,10 @@ function PizzaSection() {
           ].map((e) => (
             <div
               key={e.name}
-              className="flex justify-between items-center bg-charcoal rounded-lg px-4 py-2 border border-red-900/10"
+              className="flex justify-between items-center bg-charcoal rounded px-4 py-2.5 border border-gold/5"
             >
-              <span className="text-cream/70 text-sm">{e.name}</span>
-              <span className="text-amber-400 text-sm font-medium">
+              <span className="text-cream/60 text-sm">{e.name}</span>
+              <span className="text-gold text-sm font-medium">
                 {e.price}
               </span>
             </div>
@@ -368,13 +383,12 @@ function PizzaSection() {
         </div>
       </div>
 
-      {/* Specialty Pizzas */}
       <div>
-        <h4 className="text-lg font-semibold text-cream mb-3">
+        <h4 className="text-lg font-semibold text-cream mb-3 font-[family-name:var(--font-heading)]">
           Specialty Pizzas
         </h4>
-        <div className="bg-charcoal rounded-lg p-4 border border-red-900/10 mb-4">
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-amber-400 font-medium">
+        <div className="bg-charcoal rounded p-4 border border-gold/5 mb-5">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gold font-medium">
             <span>12&quot; Small $20.59</span>
             <span>16&quot; Large $24.59</span>
             <span>18&quot; XL State Fair $30.59</span>
@@ -409,10 +423,10 @@ function PizzaSection() {
           ].map((sp) => (
             <div
               key={sp.name}
-              className="flex flex-col py-3 border-b border-red-900/10 last:border-0"
+              className="flex flex-col py-3.5 border-b border-gold/5 last:border-0"
             >
               <h5 className="text-cream font-medium">{sp.name}</h5>
-              <p className="text-cream/50 text-sm">{sp.description}</p>
+              <p className="text-cream/45 text-sm">{sp.description}</p>
             </div>
           ))}
         </div>
@@ -421,10 +435,10 @@ function PizzaSection() {
   );
 }
 
-function SidesNote() {
+function SidesSection() {
   return (
-    <div className="bg-gradient-to-r from-red-900/20 to-amber-900/10 rounded-2xl p-6 sm:p-8 border border-red-900/20">
-      <h3 className="text-xl font-bold text-amber-400 mb-4">
+    <div className="bg-charcoal-light rounded-lg p-6 sm:p-8 border border-gold/10">
+      <h3 className="text-2xl font-bold text-gold mb-6 font-[family-name:var(--font-heading)]">
         Sides & Add-Ons
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -439,10 +453,10 @@ function SidesNote() {
         ].map((s) => (
           <div
             key={s.name}
-            className="flex justify-between items-center bg-charcoal/50 rounded-lg px-4 py-2 border border-red-900/10"
+            className="flex justify-between items-center bg-charcoal rounded px-4 py-2.5 border border-gold/5"
           >
-            <span className="text-cream/70 text-sm">{s.name}</span>
-            <span className="text-amber-400 text-sm font-medium">
+            <span className="text-cream/60 text-sm">{s.name}</span>
+            <span className="text-gold text-sm font-medium">
               {s.price}
             </span>
           </div>
@@ -455,15 +469,20 @@ function SidesNote() {
 export default function MenuPage() {
   return (
     <main className="min-h-screen">
-      {/* Menu Hero */}
-      <section className="relative py-16 sm:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-charcoal to-wood-dark" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(183,28,28,0.2)_0%,_transparent_60%)]" />
+      <section className="relative py-20 sm:py-24 overflow-hidden">
+        <Image
+          src="/images/pizza-bg.jpg"
+          alt="Pizza background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/75" />
         <div className="relative z-10 text-center px-4">
-          <span className="text-5xl mb-4 block">🍕</span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-cream mb-3">
+          <h1 className="text-4xl sm:text-5xl font-bold text-cream mb-3 font-[family-name:var(--font-heading)]">
             Our Menu
           </h1>
+          <div className="w-20 h-0.5 bg-gold mx-auto mb-4" />
           <p className="text-cream/60 max-w-md mx-auto">
             Original Syracuse Style pizza and so much more. Made with passion
             since 1957.
@@ -471,86 +490,79 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* Discount notices */}
       <section className="bg-charcoal py-4">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <div className="bg-amber-400/10 border border-amber-400/20 rounded-lg px-4 py-2 text-center">
-              <span className="text-amber-400 font-semibold text-sm">
-                💰 5% Cash Discount on All Orders
+            <div className="bg-gold/10 border border-gold/20 rounded px-5 py-2.5 text-center">
+              <span className="text-gold font-semibold text-sm">
+                5% Cash Discount on All Orders
               </span>
             </div>
-            <div className="bg-amber-400/10 border border-amber-400/20 rounded-lg px-4 py-2 text-center">
-              <span className="text-amber-400 font-semibold text-sm">
-                🎉 10% Off Orders of $150+
+            <div className="bg-gold/10 border border-gold/20 rounded px-5 py-2.5 text-center">
+              <span className="text-gold font-semibold text-sm">
+                10% Off Orders of $150+
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Menu categories quick nav */}
-      <section className="bg-charcoal sticky top-16 z-40 border-b border-red-900/20">
+      <section className="bg-charcoal sticky top-20 z-40 border-b border-gold/10">
         <div className="max-w-4xl mx-auto px-4 py-3 overflow-x-auto">
           <div className="flex gap-2 min-w-max">
-            {[
-              "Appetizers",
-              "Salads",
-              "Burgers",
-              "Sandwiches",
-              "Chicken Sandwiches",
-              "Philly Subs",
-              "Pizza",
-            ].map((cat) => (
+            {categoryNav.map((cat) => (
               <a
-                key={cat}
-                href={`#${cat.toLowerCase().replace(/\s+/g, "-")}`}
-                className="px-3 py-1.5 rounded-full text-sm bg-red-900/20 text-cream/70 hover:bg-red-700 hover:text-cream transition-colors whitespace-nowrap"
+                key={cat.id}
+                href={`#${cat.id}`}
+                className="px-4 py-2 rounded text-sm bg-charcoal-light text-cream/60 hover:bg-deep-red hover:text-cream transition-colors whitespace-nowrap border border-gold/5 hover:border-deep-red"
               >
-                {cat}
+                {cat.label}
               </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Menu content */}
       <section className="py-12 bg-charcoal">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {menuData.map((category) => (
             <div
-              key={category.title}
-              id={category.title.toLowerCase().replace(/\s+/g, "-")}
-              className="scroll-mt-32"
+              key={category.id}
+              id={category.id}
+              className="scroll-mt-36"
             >
               <MenuSection category={category} />
             </div>
           ))}
 
-          <div id="pizza" className="scroll-mt-32">
+          <div id="pizza" className="scroll-mt-36">
             <PizzaSection />
           </div>
 
-          <SidesNote />
+          <div id="sides" className="scroll-mt-36">
+            <SidesSection />
+          </div>
 
-          {/* Order CTA */}
-          <div className="text-center py-8">
+          <div className="text-center py-10">
             <a
               href="https://www.twintreesfayetteville.com/services-2"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-red-700 hover:bg-red-600 text-cream px-10 py-4 rounded-lg text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-red-900/50"
+              className="inline-block bg-deep-red hover:bg-deep-red-light text-cream px-12 py-4 rounded text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-black/40"
             >
               Order Online Now
             </a>
-            <p className="text-cream/50 text-sm mt-3">
+            <p className="text-cream/40 text-sm mt-4">
               Or call us at{" "}
               <a
                 href="tel:315-632-4777"
-                className="text-amber-400 hover:text-amber-300"
+                className="text-gold hover:text-gold-light transition-colors"
               >
                 315-632-4777
               </a>
+            </p>
+            <p className="text-cream/30 text-xs mt-2">
+              Delivery ~45 min | Pickup ~25-30 min | Curbside available
             </p>
           </div>
         </div>
