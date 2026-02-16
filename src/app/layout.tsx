@@ -155,30 +155,30 @@ function Navigation() {
             >
               Menu
             </Link>
-            <a
-              href="/#location"
+            <Link
+              href="/location"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Location
-            </a>
-            <a
-              href="/#gallery"
+            </Link>
+            <Link
+              href="/gallery"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Gallery
-            </a>
+            </Link>
             <Link
               href="/about"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               About
             </Link>
-            <a
-              href="/#contact"
+            <Link
+              href="/contact"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Contact
-            </a>
+            </Link>
             <span className="text-cream/50">|</span>
             <a
               href="tel:315-632-4777"
@@ -219,30 +219,30 @@ function Navigation() {
               >
                 Menu
               </Link>
-              <a
-                href="/#location"
+              <Link
+                href="/location"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
               >
                 Location
-              </a>
-              <a
-                href="/#gallery"
+              </Link>
+              <Link
+                href="/gallery"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
               >
                 Gallery
-              </a>
+              </Link>
               <Link
                 href="/about"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
               >
                 About
               </Link>
-              <a
-                href="/#contact"
+              <Link
+                href="/contact"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
               >
                 Contact
-              </a>
+              </Link>
               <div className="border-t border-gold/10 mt-2 pt-2 px-4">
                 <a
                   href="tel:315-632-4777"
@@ -300,6 +300,38 @@ function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
+                  href="/menu"
+                  className="text-cream/60 hover:text-gold transition-colors"
+                >
+                  Full Menu
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/order"
+                  className="text-cream/60 hover:text-gold transition-colors"
+                >
+                  Order Online
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/location"
+                  className="text-cream/60 hover:text-gold transition-colors"
+                >
+                  Location &amp; Hours
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gallery"
+                  className="text-cream/60 hover:text-gold transition-colors"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/about"
                   className="text-cream/60 hover:text-gold transition-colors"
                 >
@@ -308,29 +340,11 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/menu"
+                  href="/contact"
                   className="text-cream/60 hover:text-gold transition-colors"
                 >
-                  Full Menu
+                  Contact
                 </Link>
-              </li>
-              <li>
-                <a
-                  href="/#location"
-                  className="text-cream/60 hover:text-gold transition-colors"
-                >
-                  Location &amp; Hours
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.twintreesfayetteville.com/services-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cream/60 hover:text-gold transition-colors"
-                >
-                  Order Online
-                </a>
               </li>
             </ul>
           </div>
