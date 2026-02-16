@@ -6,6 +6,13 @@ import "./globals.css";
 const siteUrl = "https://twin-trees-fayetteville.vercel.app";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/icon.png",
+  },
   title: "Twin Trees Fayetteville | Original Syracuse Style Pizza Since 1957",
   description:
     "Twin Trees Fayetteville - Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more. Order online or visit us at 104 Highbridge St, Fayetteville, NY 13066.",
@@ -127,48 +134,48 @@ function Navigation() {
             <Image
               src="/images/logo.png"
               alt="Twin Trees Logo"
-              width={48}
-              height={48}
-              className="w-12 h-12 object-contain"
+              width={56}
+              height={56}
+              className="w-14 h-14 object-contain"
             />
             <div className="hidden sm:block">
-              <span className="text-lg font-bold text-cream tracking-wide font-[family-name:var(--font-heading)]">
+              <span className="text-xl font-bold text-cream tracking-wide font-[family-name:var(--font-heading)]">
                 Twin Trees
               </span>
-              <span className="text-xs text-gold ml-2 font-[family-name:var(--font-heading)]">
+              <span className="text-sm text-gold ml-2 font-[family-name:var(--font-heading)]">
                 Fayetteville
               </span>
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center gap-6 text-sm">
+          <div className="hidden md:flex items-center gap-7 text-base">
             <a
               href="/#about"
-              className="text-cream/80 hover:text-gold transition-colors"
+              className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               About
             </a>
             <Link
               href="/menu"
-              className="text-cream/80 hover:text-gold transition-colors"
+              className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Menu
             </Link>
             <a
               href="/#gallery"
-              className="text-cream/80 hover:text-gold transition-colors"
+              className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Gallery
             </a>
             <a
               href="/#location"
-              className="text-cream/80 hover:text-gold transition-colors"
+              className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Location
             </a>
             <a
               href="/#contact"
-              className="text-cream/80 hover:text-gold transition-colors"
+              className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Contact
             </a>
