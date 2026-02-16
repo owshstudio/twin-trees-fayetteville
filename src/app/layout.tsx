@@ -132,11 +132,11 @@ function Navigation() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
-              alt="Twin Trees Logo"
-              width={56}
-              height={56}
-              className="w-14 h-14 object-contain"
+              src="/images/twin-trees-icon.svg"
+              alt="Twin Trees"
+              width={40}
+              height={46}
+              className="w-10 h-12 object-contain"
             />
             <div className="hidden sm:block whitespace-nowrap">
               <span className="text-xl font-bold text-cream tracking-wide font-[family-name:var(--font-heading)]">

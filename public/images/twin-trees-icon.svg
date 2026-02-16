@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" fill="none">
+  <defs>
+    <linearGradient id="leftTree" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#2B6B22"/>
+      <stop offset="100%" stop-color="#4A8B30"/>
+    </linearGradient>
+    <linearGradient id="rightTree" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#3A8C2A"/>
+      <stop offset="100%" stop-color="#9ABB28"/>
+    </linearGradient>
+  </defs>
+  <!-- Left tree (behind) -->
+  <g fill="url(#leftTree)">
+    <polygon points="42,8 18,40 30,38 12,65 28,62 6,95 32,90 2,125 82,125 52,90 78,95 56,62 72,65 50,38 62,40"/>
+  </g>
+  <!-- Right tree (front) -->
+  <g fill="url(#rightTree)">
+    <polygon points="78,18 54,50 66,48 48,75 64,72 42,105 68,100 38,135 118,135 88,100 114,105 92,72 108,75 90,48 102,50"/>
+  </g>
+</svg>

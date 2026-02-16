@@ -15,10 +15,10 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-cream mb-4 tracking-tight font-[family-name:var(--font-heading)]">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream mb-4 tracking-tight font-[family-name:var(--font-heading)]">
           Twin Trees
         </h1>
-        <p className="text-3xl sm:text-4xl text-gold font-medium mb-4 font-[family-name:var(--font-heading)]">
+        <p className="text-2xl sm:text-3xl md:text-4xl text-gold font-medium mb-4 font-[family-name:var(--font-heading)]">
           Fayetteville
         </p>
         <p className="text-xl sm:text-2xl text-cream/80 mb-6 max-w-xl mx-auto tracking-wide">
@@ -207,12 +207,20 @@ function Gallery() {
     { src: "/images/gallery/photo-6.jpg", alt: "Burgers and sandwiches at Twin Trees" },
     { src: "/images/gallery/photo-7.jpg", alt: "Twin Trees kitchen preparing orders" },
     { src: "/images/gallery/photo-8.jpg", alt: "Customer favorites at Twin Trees Fayetteville" },
+    { src: "/images/gallery/photo-9.jpg", alt: "Twin Trees pizza fresh out of the oven" },
+    { src: "/images/gallery/photo-10.jpg", alt: "Twin Trees Fayetteville interior" },
+    { src: "/images/gallery/photo-11.jpg", alt: "Specialty pizza at Twin Trees" },
+    { src: "/images/gallery/photo-12.jpg", alt: "Twin Trees menu favorites" },
+    { src: "/images/gallery/photo-13.jpg", alt: "Twin Trees classic pie" },
+    { src: "/images/gallery/photo-14.jpg", alt: "Loaded fries at Twin Trees" },
+    { src: "/images/gallery/photo-15.jpg", alt: "Twin Trees team at work" },
+    { src: "/images/gallery/photo-16.jpg", alt: "Twin Trees Fayetteville favorites" },
   ];
 
   return (
     <section id="gallery" className="py-24 bg-charcoal-light scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-cream mb-4 font-[family-name:var(--font-heading)]">
             Gallery
           </h2>
@@ -222,23 +230,26 @@ function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {photos.map((photo, i) => (
-            <div
-              key={i}
-              className="relative aspect-square rounded-lg overflow-hidden group"
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-            </div>
-          ))}
+        <div className="overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4">
+          <div className="flex gap-4" style={{ width: "max-content" }}>
+            {photos.map((photo, i) => (
+              <div
+                key={i}
+                className="relative w-64 h-80 flex-shrink-0 rounded-lg overflow-hidden group"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="256px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+              </div>
+            ))}
+          </div>
         </div>
+        <p className="text-center text-cream/30 text-sm mt-4">Scroll to see more</p>
       </div>
     </section>
   );
@@ -249,7 +260,7 @@ function Location() {
     <section id="location" className="py-24 bg-charcoal scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-cream mb-4 font-[family-name:var(--font-heading)]">
+          <h2 className="text-4xl sm:text-5xl font-bold text-cream mb-4 font-[family-name:var(--font-heading)]">
             Location &amp; Hours
           </h2>
           <div className="w-20 h-0.5 bg-gold mx-auto" />
@@ -261,7 +272,7 @@ function Location() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.7!2d-76.0045!3d43.0297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3a6d26e7b3f%3A0x5e8b1d3a8d6c4f2a!2s104+Highbridge+St%2C+Fayetteville%2C+NY+13066!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                 width="100%"
-                height="350"
+                height="400"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -526,8 +537,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <MenuPreview />
       <Testimonials />
+      <MenuPreview />
       <Gallery />
       <Location />
       <Contact />
