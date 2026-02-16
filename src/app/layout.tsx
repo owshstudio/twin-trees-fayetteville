@@ -151,7 +151,7 @@ const jsonLd = {
     "@type": "OrderAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.twintreesfayetteville.com/services-2",
+      urlTemplate: "https://twintreesfayetteville.mobilebytes.com/menu",
       actionPlatform: [
         "http://schema.org/DesktopWebPlatform",
         "http://schema.org/MobileWebPlatform",
@@ -257,7 +257,7 @@ function Navigation() {
               315-632-4777
             </a>
             <a
-              href="https://www.twintreesfayetteville.com/services-2"
+              href="https://twintreesfayetteville.mobilebytes.com/menu"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-deep-red hover:bg-deep-red-light text-cream px-5 py-2.5 rounded font-semibold transition-colors"
@@ -323,7 +323,7 @@ function Navigation() {
               </div>
               <div className="px-4 pb-2">
                 <a
-                  href="https://www.twintreesfayetteville.com/services-2"
+                  href="https://twintreesfayetteville.mobilebytes.com/menu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-deep-red hover:bg-deep-red-light text-cream px-4 py-2.5 rounded font-semibold transition-colors"

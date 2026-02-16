@@ -30,7 +30,7 @@ function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://www.twintreesfayetteville.com/services-2"
+            href="https://twintreesfayetteville.mobilebytes.com/menu"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-deep-red hover:bg-deep-red-light text-cream px-10 py-4 rounded text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-black/40"
