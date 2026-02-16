@@ -142,7 +142,7 @@ function Navigation() {
               <span className="text-xl font-bold text-cream tracking-wide font-[family-name:var(--font-heading)]">
                 Twin Trees
               </span>
-              <span className="text-xs text-gold tracking-widest uppercase font-[family-name:var(--font-heading)]">
+              <span className="text-xs text-gold font-semibold tracking-widest uppercase font-[family-name:var(--font-heading)]">
                 Fayetteville
               </span>
             </div>

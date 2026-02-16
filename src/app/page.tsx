@@ -18,7 +18,7 @@ function Hero() {
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream mb-4 tracking-tight font-[family-name:var(--font-heading)]">
           Twin Trees
         </h1>
-        <p className="text-2xl sm:text-3xl md:text-4xl text-gold font-medium mb-4 font-[family-name:var(--font-heading)]">
+        <p className="text-2xl sm:text-3xl md:text-4xl text-gold font-bold mb-4 font-[family-name:var(--font-heading)]">
           Fayetteville
         </p>
         <p className="text-xl sm:text-2xl text-cream/80 mb-6 max-w-xl mx-auto tracking-wide">

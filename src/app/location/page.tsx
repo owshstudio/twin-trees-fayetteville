@@ -153,48 +153,62 @@ export default function LocationPage() {
             Visiting Us
           </h2>
           <div className="grid sm:grid-cols-3 gap-8">
-            <div className="p-6 bg-charcoal rounded-lg border border-gold/10 text-center">
-              <div className="w-12 h-12 rounded-full bg-deep-red/20 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="p-8 bg-charcoal rounded-lg border border-gold/10 text-center">
+              <div className="w-14 h-14 rounded-full bg-deep-red/20 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-gold font-semibold mb-2 font-[family-name:var(--font-heading)]">Dine In</h3>
-              <p className="text-cream/60 text-sm">Walk-ins welcome. No reservations needed. Grab a booth and enjoy.</p>
+              <h3 className="text-gold font-semibold text-lg mb-2 font-[family-name:var(--font-heading)]">Dine In</h3>
+              <p className="text-cream/60">Walk-ins welcome. No reservations needed. Grab a booth and enjoy.</p>
             </div>
-            <div className="p-6 bg-charcoal rounded-lg border border-gold/10 text-center">
-              <div className="w-12 h-12 rounded-full bg-deep-red/20 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="p-8 bg-charcoal rounded-lg border border-gold/10 text-center">
+              <div className="w-14 h-14 rounded-full bg-deep-red/20 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
               </div>
-              <h3 className="text-gold font-semibold mb-2 font-[family-name:var(--font-heading)]">Pickup</h3>
-              <p className="text-cream/60 text-sm">Order ahead by phone or online. Curbside pickup available -- just call when you arrive.</p>
+              <h3 className="text-gold font-semibold text-lg mb-2 font-[family-name:var(--font-heading)]">Pickup</h3>
+              <p className="text-cream/60">Order ahead by phone or online. Curbside pickup available -- just call when you arrive.</p>
             </div>
-            <div className="p-6 bg-charcoal rounded-lg border border-gold/10 text-center">
-              <div className="w-12 h-12 rounded-full bg-deep-red/20 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="p-8 bg-charcoal rounded-lg border border-gold/10 text-center">
+              <div className="w-14 h-14 rounded-full bg-deep-red/20 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
                 </svg>
               </div>
-              <h3 className="text-gold font-semibold mb-2 font-[family-name:var(--font-heading)]">Delivery</h3>
-              <p className="text-cream/60 text-sm">We deliver to Fayetteville and surrounding areas. Estimated delivery time ~45 minutes.</p>
+              <h3 className="text-gold font-semibold text-lg mb-2 font-[family-name:var(--font-heading)]">Delivery</h3>
+              <p className="text-cream/60">We deliver to Fayetteville and surrounding areas. Estimated delivery time ~45 minutes.</p>
             </div>
           </div>
 
-          <div className="mt-12 p-6 bg-charcoal rounded-lg border border-gold/10">
-            <h3 className="text-gold font-semibold mb-3 font-[family-name:var(--font-heading)]">Estimated Wait Times</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="flex justify-between items-center py-2">
-                <span className="text-cream/70">Pickup Orders</span>
-                <span className="text-cream font-medium">~25-30 minutes</span>
+          <div className="mt-12 p-8 bg-charcoal rounded-lg border border-gold/10">
+            <h3 className="text-gold font-semibold text-xl mb-6 font-[family-name:var(--font-heading)]">Estimated Wait Times</h3>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="flex items-center gap-4 p-4 bg-charcoal-light rounded-lg border border-gold/5">
+                <div className="w-12 h-12 rounded-full bg-deep-red/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-cream font-semibold text-lg">~25-30 min</p>
+                  <p className="text-cream/50 text-sm">Pickup Orders</p>
+                </div>
               </div>
-              <div className="flex justify-between items-center py-2">
-                <span className="text-cream/70">Delivery Orders</span>
-                <span className="text-cream font-medium">~45 minutes</span>
+              <div className="flex items-center gap-4 p-4 bg-charcoal-light rounded-lg border border-gold/5">
+                <div className="w-12 h-12 rounded-full bg-deep-red/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-cream font-semibold text-lg">~45 min</p>
+                  <p className="text-cream/50 text-sm">Delivery Orders</p>
+                </div>
               </div>
             </div>
-            <p className="text-cream/40 text-xs mt-3">Wait times may vary during peak hours (Friday/Saturday evenings).</p>
+            <p className="text-cream/40 text-xs mt-4">Wait times may vary during peak hours (Friday/Saturday evenings).</p>
           </div>
         </div>
       </section>
