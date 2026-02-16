@@ -277,7 +277,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/images/logo.png"
+                src="/images/twin-trees-icon.svg"
                 alt="Twin Trees Logo"
                 width={40}
                 height={40}

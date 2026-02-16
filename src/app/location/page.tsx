@@ -225,7 +225,7 @@ export default function LocationPage() {
             className="inline-flex items-center gap-4 p-6 bg-charcoal-light rounded-lg border border-gold/10 hover:border-gold/30 transition-all group"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/twin-trees-icon.svg"
               alt="Twin Trees Logo"
               width={40}
               height={40}
