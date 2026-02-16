@@ -497,15 +497,15 @@ function Contact() {
 function Testimonials() {
   const reviews = [
     {
-      text: "Best pizza in CNY, hands down. The Syracuse style is unmatched anywhere else.",
+      text: "The pizza and chargrilled wings were great all three times. Prices are good, food is great -- give them a shot.",
       author: "Google Review",
     },
     {
-      text: "Our family has been coming here for years. The food is always consistent and delicious.",
+      text: "I LOVE the food here. The pizza and wings are to die for. Twin Trees never disappoints.",
       author: "Google Review",
     },
     {
-      text: "Tried the Boss sub for the first time and it blew my mind. New go-to order.",
+      text: "Great Italian food and great place to eat. Been going there for the last 50 years. My family and I became good friends with the owners.",
       author: "Google Review",
     },
   ];
