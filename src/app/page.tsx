@@ -15,21 +15,13 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <Image
-          src="/images/logo.png"
-          alt="Twin Trees Logo"
-          width={120}
-          height={120}
-          className="mx-auto mb-8 w-24 h-24 sm:w-30 sm:h-30 object-contain drop-shadow-2xl"
-          priority
-        />
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-cream mb-3 tracking-tight font-[family-name:var(--font-heading)]">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-cream mb-4 tracking-tight font-[family-name:var(--font-heading)]">
           Twin Trees
         </h1>
-        <p className="text-2xl sm:text-3xl text-gold font-medium mb-2 font-[family-name:var(--font-heading)]">
+        <p className="text-3xl sm:text-4xl text-gold font-medium mb-4 font-[family-name:var(--font-heading)]">
           Fayetteville
         </p>
-        <p className="text-lg sm:text-xl text-cream/80 mb-6 max-w-xl mx-auto tracking-wide">
+        <p className="text-xl sm:text-2xl text-cream/80 mb-6 max-w-xl mx-auto tracking-wide">
           Passion for Pizza &nbsp;|&nbsp; Original Syracuse Style
         </p>
         <p className="text-cream/60 text-sm mb-10 tracking-widest uppercase">
@@ -215,10 +207,6 @@ function Gallery() {
     { src: "/images/gallery/photo-6.jpg", alt: "Burgers and sandwiches at Twin Trees" },
     { src: "/images/gallery/photo-7.jpg", alt: "Twin Trees kitchen preparing orders" },
     { src: "/images/gallery/photo-8.jpg", alt: "Customer favorites at Twin Trees Fayetteville" },
-    { src: "/images/gallery/photo-9.jpg", alt: "Twin Trees pizza fresh out of the oven" },
-    { src: "/images/gallery/photo-10.jpg", alt: "Twin Trees Fayetteville interior" },
-    { src: "/images/gallery/photo-11.jpg", alt: "Specialty pizza at Twin Trees" },
-    { src: "/images/gallery/photo-12.jpg", alt: "Twin Trees menu favorites" },
   ];
 
   return (
@@ -495,11 +483,51 @@ function Contact() {
   );
 }
 
+function Testimonials() {
+  const reviews = [
+    {
+      text: "Best pizza in CNY, hands down. The Syracuse style is unmatched anywhere else.",
+      author: "Google Review",
+    },
+    {
+      text: "Our family has been coming here for years. The food is always consistent and delicious.",
+      author: "Google Review",
+    },
+    {
+      text: "Tried the Boss sub for the first time and it blew my mind. New go-to order.",
+      author: "Google Review",
+    },
+  ];
+
+  return (
+    <section className="py-16 bg-charcoal border-y border-gold/10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-8">
+          {reviews.map((review, i) => (
+            <div key={i} className="text-center">
+              <div className="flex justify-center gap-1 mb-4">
+                {[...Array(5)].map((_, s) => (
+                  <svg key={s} className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-cream/80 italic leading-relaxed mb-3">&ldquo;{review.text}&rdquo;</p>
+              <p className="text-cream/40 text-sm">{review.author}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <main>
       <Hero />
       <MenuPreview />
+      <Testimonials />
       <Gallery />
       <Location />
       <Contact />

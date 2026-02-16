@@ -150,29 +150,29 @@ function Navigation() {
 
           <div className="hidden lg:flex items-center gap-7 text-base whitespace-nowrap">
             <Link
-              href="/about"
-              className="text-cream/80 hover:text-gold transition-colors font-medium"
-            >
-              About
-            </Link>
-            <Link
               href="/menu"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Menu
             </Link>
             <a
-              href="/#gallery"
-              className="text-cream/80 hover:text-gold transition-colors font-medium"
-            >
-              Gallery
-            </a>
-            <a
               href="/#location"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
             >
               Location
             </a>
+            <a
+              href="/#gallery"
+              className="text-cream/80 hover:text-gold transition-colors font-medium"
+            >
+              Gallery
+            </a>
+            <Link
+              href="/about"
+              className="text-cream/80 hover:text-gold transition-colors font-medium"
+            >
+              About
+            </Link>
             <a
               href="/#contact"
               className="text-cream/80 hover:text-gold transition-colors font-medium"
@@ -214,29 +214,29 @@ function Navigation() {
             </summary>
             <div className="absolute right-0 top-full mt-2 bg-charcoal-light border border-gold/10 rounded-lg shadow-xl py-2 w-56 z-50">
               <Link
-                href="/about"
-                className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
-              >
-                About
-              </Link>
-              <Link
                 href="/menu"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
               >
                 Menu
               </Link>
               <a
-                href="/#gallery"
-                className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
-              >
-                Gallery
-              </a>
-              <a
                 href="/#location"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
               >
                 Location
               </a>
+              <a
+                href="/#gallery"
+                className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
+              >
+                Gallery
+              </a>
+              <Link
+                href="/about"
+                className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
+              >
+                About
+              </Link>
               <a
                 href="/#contact"
                 className="block px-4 py-2.5 text-cream/80 hover:text-gold hover:bg-deep-red/10"
