@@ -8,10 +8,10 @@ const siteUrl = "https://twin-trees-fayetteville.vercel.app";
 export const metadata: Metadata = {
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
     ],
-    apple: "/icon.png",
+    apple: { url: "/apple-icon.png", sizes: "180x180" },
   },
   title: "Twin Trees Fayetteville - Syracuse Style Pizza Since 1957",
   description:
