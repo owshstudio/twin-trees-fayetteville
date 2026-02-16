@@ -14,11 +14,11 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal" />
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.7)" }}>
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream mb-4 tracking-tight font-[family-name:var(--font-heading)]">
           Twin Trees
         </h1>
-        <p className="text-2xl sm:text-3xl md:text-4xl text-gold font-bold mb-4 font-[family-name:var(--font-heading)]">
+        <p className="text-2xl sm:text-3xl md:text-4xl text-gold font-bold mb-4 font-[family-name:var(--font-heading)]" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5)" }}>
           Fayetteville
         </p>
         <p className="text-xl sm:text-2xl text-cream/80 mb-6 max-w-xl mx-auto tracking-wide">

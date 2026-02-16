@@ -138,11 +138,11 @@ function Navigation() {
               height={46}
               className="w-10 h-12 object-contain"
             />
-            <div className="hidden sm:flex flex-col leading-tight">
+            <div className="hidden sm:block">
               <span className="text-xl font-bold text-cream tracking-wide font-[family-name:var(--font-heading)]">
                 Twin Trees
               </span>
-              <span className="text-xs text-gold font-semibold tracking-widest uppercase font-[family-name:var(--font-heading)]">
+              <span className="text-base text-gold font-semibold ml-1.5 font-[family-name:var(--font-heading)]">
                 Fayetteville
               </span>
             </div>
