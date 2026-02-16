@@ -538,7 +538,6 @@ export default function Home() {
     <main>
       <Hero />
       <Testimonials />
-      <About />
       <MenuPreview />
       <Gallery />
       <Location />
