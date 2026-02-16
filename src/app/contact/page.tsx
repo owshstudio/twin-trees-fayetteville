@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Twin Trees Fayetteville | 315-632-4777",
+  title: "Contact Twin Trees Fayetteville - Phone & Catering",
   description:
-    "Contact Twin Trees Fayetteville for orders, catering, large party orders, and questions. Call 315-632-4777 or visit us at 104 Highbridge St, Fayetteville, NY.",
-  keywords:
-    "contact Twin Trees Fayetteville, Twin Trees phone number, Twin Trees catering, pizza catering Fayetteville NY, large order pizza Syracuse",
+    "Contact Twin Trees Fayetteville for orders, catering and large party orders. Call 315-632-4777 or visit us at 104 Highbridge St, Fayetteville, NY 13066.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

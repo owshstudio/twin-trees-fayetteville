@@ -2,9 +2,10 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Twin Trees Fayetteville",
+  title: "About Twin Trees Fayetteville - Our Story Since 1957",
   description:
-    "The Ross family has been serving Original Syracuse Style pizza since 1957. Now in our third generation with 9 locations across Central New York.",
+    "Three generations of the Ross family have served Original Syracuse Style pizza since 1957. Learn about Twin Trees Fayetteville and our 9 CNY locations.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

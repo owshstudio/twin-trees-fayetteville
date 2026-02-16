@@ -3,11 +3,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Location & Hours | Twin Trees Fayetteville | 104 Highbridge St",
+  title: "Hours & Directions - Twin Trees Fayetteville",
   description:
-    "Find Twin Trees Fayetteville at 104 Highbridge St, Fayetteville, NY 13066. Open 7 days a week. Dine-in, pickup, and delivery available. Call 315-632-4777.",
-  keywords:
-    "Twin Trees Fayetteville location, pizza Fayetteville NY, 104 Highbridge St, Twin Trees hours, pizza delivery Fayetteville, pizza near me Fayetteville",
+    "Twin Trees Fayetteville is at 104 Highbridge St, Fayetteville, NY 13066. Open 7 days a week for dine-in, pickup and delivery. Call 315-632-4777 to order.",
+  alternates: { canonical: "/location" },
 };
 
 const jsonLd = {

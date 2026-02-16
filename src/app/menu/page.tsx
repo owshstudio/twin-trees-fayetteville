@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Menu | Twin Trees Fayetteville - Original Syracuse Style Pizza",
+  title: "Menu - Twin Trees Fayetteville Pizza, Wings & More",
   description:
-    "Full menu for Twin Trees Fayetteville. Pizza, burgers, subs, salads, appetizers & more. View all items with prices. Order online or call 315-632-4777.",
+    "View the full Twin Trees Fayetteville menu with prices. Pizza, wings, burgers, Philly subs, salads and appetizers. Order online or call 315-632-4777.",
   alternates: { canonical: "/menu" },
   openGraph: {
     title: "Menu | Twin Trees Fayetteville",

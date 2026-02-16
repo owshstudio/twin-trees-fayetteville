@@ -2,11 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Order Online | Twin Trees Fayetteville | Pizza Delivery & Pickup",
+  title: "Order Online - Twin Trees Fayetteville Delivery & Pickup",
   description:
-    "Order Twin Trees Fayetteville pizza, wings, subs, and more online for delivery or pickup. Serving Fayetteville, Manlius, Dewitt, and surrounding Syracuse areas.",
-  keywords:
-    "order Twin Trees online, pizza delivery Fayetteville NY, Twin Trees pickup, order pizza Fayetteville, pizza delivery 13066, Syracuse pizza delivery, Twin Trees Fayetteville order",
+    "Order Twin Trees Fayetteville pizza, wings and subs online. Delivery and pickup available. Serving Fayetteville, Manlius, Dewitt and greater Syracuse area.",
+  alternates: { canonical: "/order" },
 };
 
 export default function OrderPage() {

@@ -2,11 +2,10 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery | Twin Trees Fayetteville | Pizza & Restaurant Photos",
+  title: "Photos - Twin Trees Fayetteville Restaurant & Pizza",
   description:
-    "Browse photos of Twin Trees Fayetteville -- our Original Syracuse Style pizza, chargrilled wings, restaurant interior, and more. 104 Highbridge St, Fayetteville, NY.",
-  keywords:
-    "Twin Trees Fayetteville photos, pizza photos Syracuse, Twin Trees gallery, restaurant photos Fayetteville NY, Syracuse style pizza pictures",
+    "Browse photos of Twin Trees Fayetteville. See our Syracuse Style pizza, chargrilled wings, restaurant interior and more at 104 Highbridge St, Fayetteville, NY.",
+  alternates: { canonical: "/gallery" },
 };
 
 export default function GalleryPage() {

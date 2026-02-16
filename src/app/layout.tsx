@@ -13,18 +13,16 @@ export const metadata: Metadata = {
     ],
     apple: "/icon.png",
   },
-  title: "Twin Trees Fayetteville | Original Syracuse Style Pizza Since 1957",
+  title: "Twin Trees Fayetteville - Syracuse Style Pizza Since 1957",
   description:
-    "Twin Trees Fayetteville - Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more. Order online or visit us at 104 Highbridge St, Fayetteville, NY 13066.",
-  keywords:
-    "Twin Trees, Fayetteville, pizza, Syracuse style pizza, restaurant, Fayetteville NY, pizza delivery, CNY pizza",
+    "Twin Trees Fayetteville serves Original Syracuse Style pizza, wings, burgers & subs. Family owned since 1957. Order online or call 315-632-4777.",
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Twin Trees Fayetteville | Original Syracuse Style Pizza Since 1957",
+    title: "Twin Trees Fayetteville - Syracuse Style Pizza Since 1957",
     description:
-      "Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more. 104 Highbridge St, Fayetteville, NY 13066.",
+      "Twin Trees Fayetteville serves Original Syracuse Style pizza, wings, burgers & subs. Family owned since 1957. Order online or call 315-632-4777.",
     url: siteUrl,
     type: "website",
     locale: "en_US",
@@ -40,20 +38,27 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Twin Trees Fayetteville | Original Syracuse Style Pizza Since 1957",
+    title: "Twin Trees Fayetteville - Syracuse Style Pizza Since 1957",
     description:
-      "Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more.",
+      "Twin Trees Fayetteville serves Original Syracuse Style pizza, wings, burgers & subs. Family owned since 1957. Order online or call 315-632-4777.",
     images: ["/images/storefront.jpg"],
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Restaurant", "LocalBusiness"],
+  "@type": "Restaurant",
+  "@id": `${siteUrl}/#restaurant`,
   name: "Twin Trees Fayetteville",
   description:
-    "Ross family owned since 1957. Original Syracuse Style pizza, burgers, subs, salads & more.",
-  image: `${siteUrl}/images/storefront.jpg`,
+    "Twin Trees Fayetteville serves Original Syracuse Style pizza, wings, burgers and subs. Ross family owned and operated since 1957. Dine-in, pickup and delivery.",
+  image: [
+    `${siteUrl}/images/storefront.jpg`,
+    `${siteUrl}/images/pizza-bg.jpg`,
+  ],
+  logo: `${siteUrl}/images/twin-trees-icon.svg`,
+  url: siteUrl,
+  telephone: "+1-315-632-4777",
   address: {
     "@type": "PostalAddress",
     streetAddress: "104 Highbridge St",
@@ -67,13 +72,19 @@ const jsonLd = {
     latitude: 43.0297,
     longitude: -76.0045,
   },
-  telephone: "+1-315-632-4777",
-  url: "https://www.twintreesfayetteville.com",
   servesCuisine: ["Pizza", "Italian", "American"],
   priceRange: "$$",
   hasMenu: {
     "@type": "Menu",
     url: `${siteUrl}/menu`,
+    hasMenuSection: [
+      { "@type": "MenuSection", name: "Pizza" },
+      { "@type": "MenuSection", name: "Burgers" },
+      { "@type": "MenuSection", name: "Sandwiches" },
+      { "@type": "MenuSection", name: "Philly Subs" },
+      { "@type": "MenuSection", name: "Appetizers" },
+      { "@type": "MenuSection", name: "Salads" },
+    ],
   },
   openingHoursSpecification: [
     {
@@ -94,6 +105,65 @@ const jsonLd = {
       opens: "12:00",
       closes: "21:00",
     },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.0",
+    reviewCount: "249",
+    bestRating: "5",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Google Reviewer" },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "The pizza and chargrilled wings were great all three times. Prices are good, food is great.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Google Reviewer" },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "I LOVE the food here. The pizza and wings are to die for. Twin Trees never disappoints.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Google Reviewer" },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "Great Italian food and great place to eat. Been going there for the last 50 years.",
+    },
+  ],
+  potentialAction: {
+    "@type": "OrderAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.twintreesfayetteville.com/services-2",
+      actionPlatform: [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform",
+      ],
+    },
+    deliveryMethod: ["http://purl.org/goodrelations/v1#DeliveryModePickUp"],
+  },
+  areaServed: [
+    { "@type": "City", name: "Fayetteville", containedInPlace: { "@type": "State", name: "New York" } },
+    { "@type": "City", name: "Manlius", containedInPlace: { "@type": "State", name: "New York" } },
+    { "@type": "City", name: "Dewitt", containedInPlace: { "@type": "State", name: "New York" } },
+    { "@type": "City", name: "Syracuse", containedInPlace: { "@type": "State", name: "New York" } },
   ],
   foundingDate: "1957",
   founder: {
