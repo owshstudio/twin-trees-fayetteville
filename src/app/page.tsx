@@ -497,16 +497,16 @@ function Contact() {
 function Testimonials() {
   const reviews = [
     {
-      text: "The pizza and chargrilled wings were great all three times. Prices are good, food is great -- give them a shot.",
-      author: "Google Review",
+      text: "I've been eating at Twin Trees since Avery Ave. We ordered a couple pizzas tonight and it was the kind of pizza that just blew you away it was so delicious and fresh. Some of the best pizza for sure.",
+      author: "Janie Gressett",
     },
     {
-      text: "I LOVE the food here. The pizza and wings are to die for. Twin Trees never disappoints.",
-      author: "Google Review",
+      text: "I needed them to deliver at a specific time at Green Lakes and they did! The pizzas were hot and fresh and DELICIOUS! I am so so impressed. Thank you Twin Trees!",
+      author: "Niki",
     },
     {
-      text: "Great Italian food and great place to eat. Been going there for the last 50 years. My family and I became good friends with the owners.",
-      author: "Google Review",
+      text: "Sausage and mushroom pizza was on par — topping ratio correct, crust cooked perfectly. Wings were good sized, meaty, crispy with the right amount of sauce. Very happy I gave them another try.",
+      author: "Irene Bourdeau",
     },
   ];
 

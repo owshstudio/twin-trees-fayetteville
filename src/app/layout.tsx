@@ -115,36 +115,21 @@ const jsonLd = {
   review: [
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Google Reviewer" },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      reviewBody:
-        "The pizza and chargrilled wings were great all three times. Prices are good, food is great.",
+      author: { "@type": "Person", name: "Janie Gressett" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "We ordered a couple pizzas tonight and it was the kind of pizza that just blew you away it was so delicious and fresh. Some of the best pizza for sure.",
     },
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Google Reviewer" },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      reviewBody:
-        "I LOVE the food here. The pizza and wings are to die for. Twin Trees never disappoints.",
+      author: { "@type": "Person", name: "Niki" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "I needed them to deliver at a specific time at Green Lakes and they did! The pizzas were hot and fresh and DELICIOUS! I am so so impressed.",
     },
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Google Reviewer" },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      reviewBody:
-        "Great Italian food and great place to eat. Been going there for the last 50 years.",
+      author: { "@type": "Person", name: "Irene Bourdeau" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Sausage and mushroom pizza was on par — topping ratio correct, crust cooked perfectly. Wings were good sized, meaty, crispy with the right amount of sauce.",
     },
   ],
   potentialAction: {
