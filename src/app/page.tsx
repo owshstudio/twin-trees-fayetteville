@@ -15,10 +15,10 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.7)" }}>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream mb-4 tracking-tight font-[family-name:var(--font-heading)]">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream mb-2 tracking-tight font-[family-name:var(--font-heading)]">
           Twin Trees
         </h1>
-        <p className="text-2xl sm:text-3xl md:text-4xl text-gold font-bold mb-4 font-[family-name:var(--font-heading)]" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5)" }}>
+        <p className="text-3xl sm:text-4xl md:text-5xl text-gold font-bold mb-4 font-[family-name:var(--font-heading)]" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5)" }}>
           Fayetteville
         </p>
         <p className="text-xl sm:text-2xl text-cream/80 mb-6 max-w-xl mx-auto tracking-wide">
@@ -230,26 +230,28 @@ function Gallery() {
           </p>
         </div>
 
-        <div className="overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4">
-          <div className="flex gap-4" style={{ width: "max-content" }}>
-            {photos.map((photo, i) => (
-              <div
-                key={i}
-                className="relative w-64 h-80 flex-shrink-0 rounded-lg overflow-hidden group"
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  sizes="256px"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-3 gap-3">
+          {photos.slice(0, 6).map((photo, i) => (
+            <div
+              key={i}
+              className="relative aspect-square rounded-lg overflow-hidden group"
+            >
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 640px) 33vw, 25vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+            </div>
+          ))}
         </div>
-        <p className="text-center text-cream/30 text-sm mt-4">Scroll to see more</p>
+        <div className="text-center mt-8">
+          <a href="/gallery" className="inline-block border border-gold/40 text-gold hover:bg-gold/10 transition-colors px-8 py-3 rounded text-sm font-medium tracking-wide">
+            View Full Gallery
+          </a>
+        </div>
       </div>
     </section>
   );
